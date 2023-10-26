@@ -12,17 +12,10 @@ export class HeroesComponent {
 
   heroes: Hero[] = [];
 
-  selectedHero?: Hero;
-
   constructor(
     private heroService: HeroService,
     private messageService: MessagesService){
 
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected Hero id=${hero.id}`);
   }
 
   getHeroes(): void {
